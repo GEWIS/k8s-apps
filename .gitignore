@@ -1,0 +1,4 @@
+.direnv
+*secret.yaml
+!*sealed-secret.yaml
+!*mirror-secret.yaml
