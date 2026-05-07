@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: gelift-tracker-prod
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./deploy/kustomize/overlays/k3s"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: gelift-tracker
+  serviceAccountName: app-deployer
+  targetNamespace: gelift-tracker-prod
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gelift-tracker-prod
