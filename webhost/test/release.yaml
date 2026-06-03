@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: webhost-test
+  namespace: flux-system
+spec:
+  interval: 10m
+  releaseName: test
+  targetNamespace: webhost-test
+  storageNamespace: webhost-test
+  serviceAccountName: app-deployer
+  chart:
+    spec:
+      chart: static-webhost
+      version: 0.1.0
+      sourceRef:
+        kind: HelmRepository
+        name: gewis-webhost
+        namespace: flux-system
+  values:
+    domains:
+      - webhost.test.gewis.nl
+    storage:
+      size: 10Gi
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: webhost-test

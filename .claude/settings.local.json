@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/luuk/home/GEWIS/CBC/k8s-apps -not -path */.git/* -type f -o -type d)"
+    ]
+  }
+}
