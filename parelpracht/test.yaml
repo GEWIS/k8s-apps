@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: parelpracht-test
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./deploy/staging"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: parelpracht
+  serviceAccountName: app-deployer
+  targetNamespace: parelpracht-test
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: parelpracht-test
