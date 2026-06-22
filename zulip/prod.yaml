@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: zulip-prod
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./zulip"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: zulip
+  serviceAccountName: app-deployer
+  targetNamespace: zulip-prod
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zulip-prod

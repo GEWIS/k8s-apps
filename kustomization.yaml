@@ -10,4 +10,5 @@ resources:
   - webhost
   - listmonk
   - osticket
+  - zulip
   - parelpracht
