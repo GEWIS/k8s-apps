@@ -12,14 +12,18 @@ spec:
   chart:
     spec:
       chart: static-webhost
-      version: 0.5.2
+      version: 0.6.0
       sourceRef:
         kind: HelmRepository
         name: gewis-webhost
         namespace: flux-system
   values:
-    domains:
-      - webhost.test.gewis.nl
+    domainGroups:
+      - name: test
+        domains:
+          - webhost.test.gewis.nl
+        oidc:
+          groups: []
     storage:
       size: 10Gi
 ---
