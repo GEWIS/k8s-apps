@@ -7,4 +7,4 @@ spec:
   interval: 1m
   url: https://github.com/GEWIS/sudosos-backend.git
   ref:
-    branch: develop
+    branch: feature/kubernetes-ready-codebase
