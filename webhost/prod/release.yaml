@@ -29,6 +29,22 @@ spec:
         oidc:
           groups:
             - "Organ - ABC"
+      - name: campus
+        domains:
+          - name: board.gewis.nl
+          - name: fse.gewis.nl
+          - name: fyc22-2.gewis.nl
+          - name: fyc5050.gewis.nl
+          - name: geduld.gewis.nl
+          - name: gewiski.gewis.nl
+          - name: intro22.gewis.nl
+          - name: kleding.gewis.nl
+          - name: mta-sts.gewis.nl
+          - name: personal.gewis.nl
+          - name: signature.gewis.nl
+          - name: studytrip2025.gewis.nl
+        oidc:
+          groups: []
     storage:
       size: 10Gi
 ---
