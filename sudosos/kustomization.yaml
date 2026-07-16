@@ -6,4 +6,4 @@ resources:
   - test.yaml
   # - prod.yaml
   - rbac-test
-  - rbac-prod
+  # - rbac-prod
