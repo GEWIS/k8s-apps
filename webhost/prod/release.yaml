@@ -29,6 +29,12 @@ spec:
         oidc:
           groups:
             - "Organ - ABC"
+      - name: gehack
+        domains:
+          - name: gehack.gewis.nl
+        oidc:
+          groups:
+            - "Organ - GEHACK"
     storage:
       size: 10Gi
 ---
