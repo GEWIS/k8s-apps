@@ -36,7 +36,7 @@ spec:
           groups:
             - "Organ - GEHACK"
     storage:
-      size: 10Gi
+      size: 20Gi
 ---
 apiVersion: v1
 kind: Namespace
