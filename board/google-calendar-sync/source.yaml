@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: google-calendar-sync
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/GEWIS/board-systems.git
+  ref:
+    branch: main

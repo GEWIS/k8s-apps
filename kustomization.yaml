@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - service-account.yaml
+  - board
   - sudosos
   - loom
   - domjudge
