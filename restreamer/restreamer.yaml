@@ -1,0 +1,66 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: restreamer
+  namespace: restreamer
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restreamer
+  namespace: restreamer
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: restreamer
+  template:
+    metadata:
+      labels:
+        app: restreamer
+    spec:
+      containers:
+        - name: restreamer
+          image: datarhei/restreamer:2.12.0
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: rtmp
+              containerPort: 1935
+          volumeMounts:
+            - name: storage
+              mountPath: /core/config
+              subPath: config
+            - name: storage
+              mountPath: /core/data
+              subPath: data
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: restreamer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: restreamer
+  namespace: restreamer
+spec:
+  selector:
+    app: restreamer
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+    - name: rtmp
+      port: 1935
+      targetPort: rtmp

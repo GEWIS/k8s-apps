@@ -35,6 +35,11 @@ spec:
         oidc:
           groups:
             - "Organ - GEHACK"
+      - name: cbc-bbq
+        domains:
+          - name: cbc-bbq.gewis.nl
+        oidc:
+          groups: []
     storage:
       size: 20Gi
 ---

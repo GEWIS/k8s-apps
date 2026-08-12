@@ -1,0 +1,31 @@
+---
+# Plain RTMP has no TLS, so there is no SNI to match on: this entrypoint can
+# only ever serve one backend.
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: restreamer-rtmp
+  namespace: restreamer
+spec:
+  entryPoints:
+    - rtmp
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: restreamer
+          port: 1935
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: restreamer
+  namespace: restreamer
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`restreamer.gewis.nl`)
+      services:
+        - name: restreamer
+          port: 8080
