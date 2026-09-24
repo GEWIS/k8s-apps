@@ -3,5 +3,7 @@ kind: Kustomization
 
 resources:
   - test.yaml
+  - prod.yaml
   - source.yaml
   - rbac-test
+  - rbac-prod
