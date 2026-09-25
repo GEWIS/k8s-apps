@@ -5,6 +5,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/GEWIS/parelpracht.git
+  url: https://github.com/GEWIS/abc-deployments.git
   ref:
-    branch: gitops
+    branch: main

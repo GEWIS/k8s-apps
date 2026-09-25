@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./deploy/staging"
+  path: "./parelpracht/overlays/test"
   prune: true
   sourceRef:
     kind: GitRepository
