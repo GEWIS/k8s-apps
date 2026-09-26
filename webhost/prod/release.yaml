@@ -40,6 +40,12 @@ spec:
           - name: cbc-bbq.gewis.nl
         oidc:
           groups: []
+      - name: static
+        domains:
+          - name: static.gewis.nl
+        oidc:
+          groups:
+            - "Organ - CBC"
     storage:
       size: 20Gi
 ---
