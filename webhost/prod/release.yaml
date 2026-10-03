@@ -46,6 +46,12 @@ spec:
         oidc:
           groups:
             - "Organ - CBC"
+      - name: stijl
+        domains:
+          - name: stijl.gewis.nl
+        oidc:
+          groups:
+            - "Organ - CBC"
     storage:
       size: 20Gi
 ---
