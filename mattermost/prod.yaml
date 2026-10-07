@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: mattermost-prod
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./mattermost"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: mattermost
+  serviceAccountName: app-deployer
+  targetNamespace: mattermost-prod
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mattermost-prod
