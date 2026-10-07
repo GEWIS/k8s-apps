@@ -52,6 +52,12 @@ spec:
         oidc:
           groups:
             - "Organ - CBC"
+      - name: board
+        domains:
+          - name: secr.personal.gewis.nl
+        oidc:
+          groups:
+            - "Board - Current board"
     storage:
       size: 20Gi
 ---
