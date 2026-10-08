@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: grooster-prod
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./grooster/overlays/production"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: grooster
+  serviceAccountName: app-deployer
+  targetNamespace: grooster-prod
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: grooster-prod
