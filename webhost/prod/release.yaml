@@ -54,9 +54,12 @@ spec:
             - "Organ - CBC"
       - name: board
         domains:
-          - name: secr.personal.gewis.nl
-          - name: cib.personal.gewis.nl
           - name: vz.personal.gewis.nl
+          - name: secr.personal.gewis.nl
+          - name: pm.personal.gewis.nl
+          - name: cib.personal.gewis.nl
+          - name: co.personal.gewis.nl
+          - name: ceb.personal.gewis.nl
         oidc:
           groups:
             - "Board - Current board"
