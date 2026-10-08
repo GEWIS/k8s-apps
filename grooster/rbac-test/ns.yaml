@@ -1,8 +1,0 @@
-apiVersion: builtin
-kind: NamespaceTransformer
-metadata:
-  name: ns
-  namespace: grooster-test
-fieldSpecs:
-  - path: metadata/namespace
-    create: true
