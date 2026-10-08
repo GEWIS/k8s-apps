@@ -55,6 +55,8 @@ spec:
       - name: board
         domains:
           - name: secr.personal.gewis.nl
+          - name: cib.personal.gewis.nl
+          - name: vz.personal.gewis.nl
         oidc:
           groups:
             - "Board - Current board"
