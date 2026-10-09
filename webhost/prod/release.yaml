@@ -63,6 +63,12 @@ spec:
         oidc:
           groups:
             - "Board - Current board"
+      - name: mta-sts
+        domains:
+          - name: mta-sts.gewis.nl
+        oidc:
+          groups:
+            - "Organ - CBC"
     storage:
       size: 20Gi
 ---
