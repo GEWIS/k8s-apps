@@ -129,6 +129,15 @@ spec:
         oidc:
           groups:
             - "Organ - SSG"
+      - name: bac
+        domains:
+          - name: bac.gewis.nl
+            writablePaths:
+              - lucy-dr-graaf
+        adminDomain: bac-admin.gewis.nl
+        oidc:
+          groups:
+            - "Organ - BAC"
       
     storage:
       size: 20Gi

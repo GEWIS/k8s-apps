@@ -1,0 +1,34 @@
+# Temporary Basic auth for the /lucy-dr-graaf route on bac.gewis.nl.
+# Ideally this is fixed in a better way, but for now the migration is more important than a proper auth solution.
+# Replaces the .htaccess HTTP basic auth that Apache enforced on the old
+# server; the FrankenPHP chart's Caddyfile has no auth directives, so this
+# is done at the Traefik layer. Rules auto-prioritize by length: this
+# beats the chart's bare Host(...) route and leaves /admin untouched.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: bac-lucy-auth
+  namespace: webhost-prod
+spec:
+  basicAuth:
+    # htpasswd file content, sealed in bac-htpasswd.yaml; accepts the
+    # Apache .htpasswd formats (MD5/apr1, SHA1, bcrypt) unchanged.
+    secret: bac-htpasswd
+    realm: lucy-dr-graaf
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bac-lucy-auth
+  namespace: webhost-prod
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`bac.gewis.nl`) && PathPrefix(`/lucy-dr-graaf`)
+      middlewares:
+        - name: bac-lucy-auth
+      services:
+        - name: prod-static-webhost-caddy
+          port: 80
