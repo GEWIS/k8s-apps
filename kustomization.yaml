@@ -19,3 +19,4 @@ resources:
   - aurora
   - nextcloud
   - mattermost
+  - keycloak
