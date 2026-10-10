@@ -69,6 +69,67 @@ spec:
         oidc:
           groups:
             - "Organ - CBC"
+      - name: 9eglinster
+        domains:
+          - name: 9eglinster.gewis.nl
+        oidc:
+          groups:
+            - "Organ - 9eglinster"
+      - name: athena
+        domains:
+          - name: athena.gewis.nl
+        oidc:
+          groups:
+            - "Organ - ATHENA"
+      - name: defi
+        domains:
+          - name: defi.gewis.nl
+        oidc:
+          groups:
+            - "Organ - Defi"
+      - name: avico
+        domains:
+          - name: avico.gewis.nl
+        oidc:
+          groups:
+            - "Organ - AViCo"
+      - name: boom
+        domains:
+          - name: boom.gewis.nl
+        oidc:
+          groups:
+            - "Organ - B.O.O.M."
+      - name: gezwem
+        domains:
+          - name: gezwem.gewis.nl
+        oidc:
+          groups:
+            - "Organ - GEZWEM"
+      - name: intro
+        domains:
+          - name: intro.gewis.nl
+        oidc:
+          groups:
+            - "Organ - Intro27"
+      - name: linkinbio
+        domains:
+          - name: linkinbio.gewis.nl
+        oidc:
+          groups:
+            - "Organ - GSM"
+      - name: odc
+        domains:
+          - name: odc.gewis.nl
+        oidc:
+          groups:
+            - "Organ - ODC"
+      - name: ssg
+        domains:
+          - name: ssg.gewis.nl
+        oidc:
+          groups:
+            - "Organ - SSG"
+      
     storage:
       size: 20Gi
 ---
