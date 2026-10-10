@@ -21,3 +21,4 @@ resources:
   - mattermost
   - keycloak
   - pwned-password
+  - room-responsible
