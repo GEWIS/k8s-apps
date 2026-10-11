@@ -19,7 +19,6 @@ resources:
   - aurora
   - nextcloud
   - mattermost
-  - keycloak
   - pwned-password
   - room-responsible
   - signal
