@@ -7,4 +7,4 @@ spec:
   interval: 1m
   url: https://github.com/GEWIS/internal-systems.git
   ref:
-    branch: main
+    branch: chore/reseal-new-cluster
