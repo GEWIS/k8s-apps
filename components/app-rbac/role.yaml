@@ -56,11 +56,6 @@ rules:
       - certificates
       - issuers
     verbs: ["*"]
-  # Databases
-  - apiGroups: ["databases.gewis.nl"]
-    resources:
-      - postgresdatabases
-    verbs: ["*"]
   # Autoscaling
   - apiGroups: ["autoscaling"]
     resources:
