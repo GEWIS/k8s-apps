@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m
   path: "./listmonk"
-  prune: false # first adoption only, set to true after adoption
+  prune: true
   sourceRef:
     kind: GitRepository
     name: listmonk
