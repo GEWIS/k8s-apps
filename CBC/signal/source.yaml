@@ -5,6 +5,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/GEWIS/internal-systems.git
+  url: https://github.com/GEWIS/cbc-deployments.git
   ref:
     branch: main
