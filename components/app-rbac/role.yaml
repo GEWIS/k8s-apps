@@ -61,6 +61,11 @@ rules:
     resources:
       - postgresdatabases
     verbs: ["*"]
+  - apiGroups: ["external-secrets.io"]
+    resources:
+      - secretstores
+      - externalsecrets
+    verbs: ["*"]
   # Autoscaling
   - apiGroups: ["autoscaling"]
     resources:
