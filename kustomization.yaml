@@ -3,23 +3,8 @@ kind: Kustomization
 
 resources:
   - service-account.yaml
+  - ABC
   - board
-  - sudosos
-  - loom
-  - domjudge
+  - CBC
+  - GEHACK
   - gelift-tracker
-  - webhost
-  - listmonk
-  - osticket
-  - zulip
-  - parelpracht
-  - grooster
-  - restreamer
-  - kaneo
-  - aurora
-  - nextcloud
-  - mattermost
-  - pwned-password
-  - room-responsible
-  - signal
-  - slugshrink
