@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./nextcloud"
+  path: "./nextcloud/overlays/test"
   prune: true
   sourceRef:
     kind: GitRepository
