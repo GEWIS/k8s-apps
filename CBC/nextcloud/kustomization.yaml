@@ -5,3 +5,5 @@ resources:
   - source.yaml
   - test.yaml
   - rbac-test
+  - prod.yaml
+  - rbac-prod
