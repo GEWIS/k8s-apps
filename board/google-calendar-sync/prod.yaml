@@ -12,3 +12,8 @@ spec:
     name: google-calendar-sync
   serviceAccountName: app-deployer
   targetNamespace: board
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: board
