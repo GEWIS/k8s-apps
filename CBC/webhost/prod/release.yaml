@@ -12,7 +12,7 @@ spec:
   chart:
     spec:
       chart: static-webhost
-      version: 0.8.0
+      version: 0.9.0
       sourceRef:
         kind: HelmRepository
         name: gewis-webhost
@@ -141,6 +141,13 @@ spec:
         oidc:
           groups:
             - "Organ - BAC"
+      - name: rink-personal
+        domains:
+          - name: rink.personal.gewis.nl
+            disabled: true
+        oidc:
+          groups:
+            - "WEBHOST - rink.personal.gewis.nl"
       
     storage:
       size: 20Gi
