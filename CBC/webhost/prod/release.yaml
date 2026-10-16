@@ -31,13 +31,13 @@ spec:
         adminDomain: abc-admin.gewis.nl
         oidc:
           groups:
-            - "Organ - ABC"
+            - "WEBHOST - abc.gewis.nl"
       - name: gehack
         domains:
           - name: gehack.gewis.nl
         oidc:
           groups:
-            - "Organ - GEHACK"
+            - "WEBHOST - gehack.gewis.nl"
       - name: cbc-bbq
         domains:
           - name: cbc-bbq.gewis.nl
@@ -48,13 +48,13 @@ spec:
           - name: static.gewis.nl
         oidc:
           groups:
-            - "Organ - CBC"
+            - "WEBHOST - static.gewis.nl"
       - name: stijl
         domains:
           - name: stijl.gewis.nl
         oidc:
           groups:
-            - "Organ - CBC"
+            - "WEBHOST - stijl.gewis.nl"
       - name: board
         domains:
           - name: vz.personal.gewis.nl
@@ -65,67 +65,72 @@ spec:
           - name: ceb.personal.gewis.nl
         oidc:
           groups:
-            - "Board - Current board"
+            - "WEBHOST - vz.personal.gewis.nl"
+            - "WEBHOST - secr.personal.gewis.nl"
+            - "WEBHOST - pm.personal.gewis.nl"
+            - "WEBHOST - cib.personal.gewis.nl"
+            - "WEBHOST - co.personal.gewis.nl"
+            - "WEBHOST - ceb.personal.gewis.nl"
       - name: mta-sts
         domains:
           - name: mta-sts.gewis.nl
         oidc:
           groups:
-            - "Organ - CBC"
+            - "WEBHOST - mta-sts.gewis.nl"
       - name: 9eglinster
         domains:
           - name: 9eglinster.gewis.nl
         oidc:
           groups:
-            - "Organ - 9eglinster"
+            - "WEBHOST - 9eglinster.gewis.nl"
       - name: athena
         domains:
           - name: athena.gewis.nl
         oidc:
           groups:
-            - "Organ - ATHENA"
+            - "WEBHOST - athena.gewis.nl"
       - name: defi
         domains:
           - name: defi.gewis.nl
         oidc:
           groups:
-            - "Organ - Defi"
+            - "WEBHOST - defi.gewis.nl"
       - name: avico
         domains:
           - name: avico.gewis.nl
         oidc:
           groups:
-            - "Organ - AViCo"
+            - "WEBHOST - avico.gewis.nl"
       - name: boom
         domains:
           - name: boom.gewis.nl
         oidc:
           groups:
-            - "Organ - B.O.O.M."
+            - "WEBHOST - boom.gewis.nl"
       - name: gezwem
         domains:
           - name: gezwem.gewis.nl
         oidc:
           groups:
-            - "Organ - GEZWEM"
+            - "WEBHOST - gezwem.gewis.nl"
       - name: intro
         domains:
           - name: intro.gewis.nl
         oidc:
           groups:
-            - "Organ - Intro27"
+            - "WEBHOST - intro.gewis.nl"
       - name: odc
         domains:
           - name: odc.gewis.nl
         oidc:
           groups:
-            - "Organ - ODC"
+            - "WEBHOST - odc.gewis.nl"
       - name: ssg
         domains:
           - name: ssg.gewis.nl
         oidc:
           groups:
-            - "Organ - SSG"
+            - "WEBHOST - ssg.gewis.nl"
       - name: bac
         domains:
           - name: bac.gewis.nl
@@ -134,7 +139,7 @@ spec:
         adminDomain: bac-admin.gewis.nl
         oidc:
           groups:
-            - "Organ - BAC"
+            - "WEBHOST - bac.gewis.nl"
       - name: rink-personal
         domains:
           - name: rink.personal.gewis.nl
