@@ -114,12 +114,6 @@ spec:
         oidc:
           groups:
             - "Organ - Intro27"
-      - name: linkinbio
-        domains:
-          - name: linkinbio.gewis.nl
-        oidc:
-          groups:
-            - "Organ - GSM"
       - name: odc
         domains:
           - name: odc.gewis.nl
