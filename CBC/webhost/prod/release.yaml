@@ -86,6 +86,7 @@ spec:
       - name: athena
         domains:
           - name: athena.gewis.nl
+        adminDomain: yourdomain.gewis.nl # ATHENA did not understand my email, so they went to yourdomain.gewis.nl/admin. This fix is here to make sure all is well.
         oidc:
           groups:
             - "WEBHOST - athena.gewis.nl"
