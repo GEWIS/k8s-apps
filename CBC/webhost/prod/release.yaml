@@ -18,6 +18,11 @@ spec:
         name: gewis-webhost
         namespace: flux-system
   values:
+    caddy:
+      image:
+        repository: dunglas/frankenphp
+        tag: "1-php8.5.12-alpine" # TMP force re pull for php2shell
+        pullPolicy: IfNotPresent
     oidc:
       provider:
         clientId: webhost-prod
