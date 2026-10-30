@@ -141,7 +141,7 @@ spec:
         domains:
           - name: bac.gewis.nl
             writablePaths:
-              - lucy-dr-graaf
+              - lucy-dr-graaf/data
         adminDomain: bac-admin.gewis.nl
         oidc:
           groups:
