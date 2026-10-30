@@ -10,5 +10,6 @@ resources:
   - restreamer
   - signal
   - slugshrink
+  - stalwart
   - webhost
   - zulip
